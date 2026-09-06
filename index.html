@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Baby ♡</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: white;
+    overflow-x: hidden;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+p {
+    line-height: 1.8;
+    color: #d6d6d6;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 15px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background: white;
+    color: black;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.hidden {
+    display: none;
+}
+
+#mainPage {
+    background: linear-gradient(135deg, #0d0d0d, #1b1020);
+}
+
+.heart {
+    font-size: 35px;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="page" id="openingPage">
+
+<div class="container">
+
+<div class="heart">🎂</div>
+
+<h1>HI BABYYYY!!!</h1>
+
+<h2>HAPPY HAPPY BIRTHDAY!!! 🎉</h2>
+
+<p>
+surprise hehe.
+<br><br>
+i know this isn't a physical gift, but i spent time making this just for you.
+<br><br>
+so... explore it properly okay? :(
+</p>
+
+<button onclick="openGift()">LET'S GO 🎁</button>
+
+</div>
+
+</section>
+
+
+<section class="page hidden" id="mainPage">
+
+<div class="container">
+
+<h1>Welcome, Birthday Boy 🎂</h1>
+
+<p>
+okay... now the real surprise begins.
+</p>
+
+<button onclick="showMessage()">Open your first surprise 💌</button>
+
+<p id="surpriseMessage" class="hidden">
+Happy birthday, baby. I hope today reminds you how special and appreciated you are.
+</p>
+
+</div>
+
+</section>
+
+
+<script>
+
+function openGift() {
+
+    document.getElementById("openingPage").classList.add("hidden");
+
+    document.getElementById("mainPage").classList.remove("hidden");
+
+}
+
+function showMessage() {
+
+    document.getElementById("surpriseMessage").classList.remove("hidden");
+
+}
+
+</script>
+
+</body>
+</html>
